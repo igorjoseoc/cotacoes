@@ -14,7 +14,7 @@ hbs.registerPartials(partialsPath)
 
 app.use(express.static(publicDirectoryPath))
 
-app.get('/', (req, res) => {
+app.get('', (req, res) => {
     res.render('index', {
         title : 'Bem vindo ao sistema de cotações',
         autor: 'Igor Costa'
@@ -96,8 +96,8 @@ app.get('*', (req, res) => {
     })
 })
 
-const port = process.env.port || 3000
+const port = process.env.port || 3001
 
 app.listen(port, () => {
-    console.log(`server is up on port 3000 ${port}`)
+    console.log(`server is up on port ${port}`)
 })
